@@ -17,6 +17,8 @@ BuildRequires: haskell(base)
 BuildRequires: haskell(haskell98)
 BuildRequires: haskell(mtl)
 BuildRequires: haskell(MissingH) >= 1.0.0
+BuildRequires: haskell(hslogger)
+BuildRequires: haskell(testpack)
 Obsoletes: haskell-configfile < 1.0.5
 
 %description
@@ -54,7 +56,7 @@ rm -fr %{buildroot}/%_datadir/*/doc/
 
 %files
 %defattr(-,root,root)
-%doc dist/doc/html
+%_docdir/%{module}-%{version}
 %_libdir/*
 %_cabal_rpm_files
 
