@@ -1,14 +1,13 @@
-%define module configfile
-%define srcname ConfigFile
+%define module ConfigFile
 
 Name: haskell-%{module}
-Version: 1.0.4
-Release: %mkrel 2
+Version: 1.0.5
+Release: %mkrel 1
 Summary: Configuration file reading & writing
 Group: Development/Other
 License: LGPL
 Url: http://software.complete.org/configfile
-Source: http://software.complete.org/%{module}/static/download_area/%{version}/%{srcname}-%{version}.tar.gz
+Source: http://software.complete.org/%{module}/static/download_area/%{version}/%{module}-%{version}.tar.gz
 BuildRoot: %_tmppath/%name-%version-%release-root
 BuildRequires: ghc
 BuildRequires: haddock
@@ -17,7 +16,8 @@ BuildRequires: haskell(parsec)
 BuildRequires: haskell(base)
 BuildRequires: haskell(haskell98)
 BuildRequires: haskell(mtl)
-BuildRequires: haskell(MissingH) >= 0.18.0
+BuildRequires: haskell(MissingH) >= 1.0.0
+Obsoletes: haskell-configfile < 1.0.5
 
 %description
 ConfigFile is a configuration file parser and writer library for Haskell.
@@ -33,7 +33,7 @@ possible to make a config file parsable by this module, the Unix shell, and
 make.
 
 %prep
-%setup -q -n %{srcname}-%{version}
+%setup -q -n %{module}-%{version}
 
 %build
 %_cabal_build
