@@ -6,7 +6,7 @@ Release: %mkrel 2
 Summary: Configuration file reading & writing
 Group: Development/Other
 License: LGPL
-Url: http://software.complete.org/configfile
+Url: https://software.complete.org/configfile
 Source: http://software.complete.org/%{module}/static/download_area/%{version}/%{module}-%{version}.tar.gz
 BuildRoot: %_tmppath/%name-%version-%release-root
 BuildRequires: ghc
