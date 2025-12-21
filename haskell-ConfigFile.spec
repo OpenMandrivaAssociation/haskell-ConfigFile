@@ -9,6 +9,7 @@ License: LGPL
 Url: https://software.complete.org/configfile
 Source: http://software.complete.org/%{module}/static/download_area/%{version}/%{module}-%{version}.tar.gz
 BuildRoot: %_tmppath/%name-%version-%release-root
+BuildRequires:	make
 BuildRequires: ghc
 BuildRequires: haddock
 BuildRequires: haskell-macros
