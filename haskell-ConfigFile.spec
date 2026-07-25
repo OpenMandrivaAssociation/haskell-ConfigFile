@@ -2,7 +2,7 @@
 
 Name: haskell-%{module}
 Version: 1.0.5
-Release: %mkrel 2
+Release: 3
 Summary: Configuration file reading & writing
 Group: Development/Other
 License: LGPL
